@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import "./_reset.scss";
+@import "_variables.scss";
+@import "./_mixins.scss";
+@import "./_header.scss";
+@import "./_breadcrumb.scss";
+@import "./_intro.scss";
+@import "./_form.scss";
+@import "./_contact.scss";
+
+a {
+  color: $link-color;
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+body {
+  background: $body-bg;
+  color: $body-color;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+}
+* {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+}
+.ml-1{
+  margin-left: 0.5rem;
+}
+.app-content {
+  max-width: 50rem;
+  margin-top: 3rem;
+  margin: 3rem auto;
+  max-width: auto;
+  padding: 1rem 2rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  color: #0ec00e;
+}

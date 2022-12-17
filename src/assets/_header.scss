@@ -1,0 +1,23 @@
+.logo {
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.navbar-header {
+@include flex-align-center;
+  font-weight: bold;
+}
+
+.navbar-header-nav {
+  margin-left: auto;
+  ul {
+    @include flex-row;
+    gap: 1rem;
+    .navbar-item {
+      border-bottom: 2px solid transparent;
+      &.active {
+        border-bottom-color: $light;
+      }
+    }
+  }
+}
