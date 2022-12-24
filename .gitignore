@@ -9,3 +9,4 @@ npm-debug.log*
 .eslintcache
 coverage
 .env
+.next
