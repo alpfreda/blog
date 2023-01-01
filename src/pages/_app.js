@@ -1,9 +1,10 @@
+import { useState, useEffect } from 'react'
 import '../assets/main.scss'
 import { Layout } from './layout'
 import { Provider } from 'react-redux'
 import { store } from '../app/store'
 import Router from "next/router"
-import { useState, useEffect } from 'react'
+import { Loading } from '../components/loading'
 // import Head from "next/head"
 // import Router from "next/router"
 
@@ -39,8 +40,7 @@ const App = ({ Component, pageProps }) => {
 
   return <Provider store={store}>
     <Layout>
-      {loading ? <div>Loading...</div>:<Component {...pageProps} />}
-      
+      {loading ? <Loading /> : <Component {...pageProps} />}
     </Layout>
   </Provider>
 }
