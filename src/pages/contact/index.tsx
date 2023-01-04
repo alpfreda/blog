@@ -1,22 +1,29 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { setActiveMenu } from '../../features/global'
+import React from 'react'
 import { ContactForm } from './contact-form'
 import { ContactInfo } from './contact-info'
+import { fetchLists } from '../../utils/firebase-provider'
 
-const Contact = () => {
-  const dispatch = useDispatch()
+interface ContactProps {
+  items: {
+    name: string,
+    icon: string,
+    url: string,
+    value: string
+  }[]
+}
 
-  useEffect(() => {
-    dispatch(setActiveMenu('CONTACT'))
-  }, [])
-
+const Contact = ({ items }: ContactProps) => {
   return <section className='contact'>
     {/* <Breadcrumb /> */}
     <h2 className='title'>Contact</h2>
-    <ContactInfo />
+    <ContactInfo items={items} />
     <ContactForm />
   </section>
 }
 
-export { Contact }
+Contact.getInitialProps = async () => {
+  const items = await fetchLists('contact-info')
+  return { items }
+}
+
+export default Contact 

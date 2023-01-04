@@ -1,25 +1,48 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Email, Github, Linkedin, Twitter } from '../../components/svg/icons'
 
-const ContactInfo = () => {
+interface ContactInfoProps {
+  items: {
+    name: string,
+    icon: string,
+    url: string,
+    value: string
+  }[]
+}
+
+const ContactInfo = ({ items }: ContactInfoProps) => {
   return <section>
-    <div className='contact-item'>
-      <Email className='contact-icon' /> Email:
-      <a href='mailto:alpfreda@gmail.com' className='ml-1'>Alpfreda@gmail.com</a>
-    </div>
-    <div className='contact-item'>
-      <Github className='contact-icon' /> Github:
-      <a href='https://github.com/alpfreda' className='ml-1' target={'_blank'}>github.com/alpfreda</a>
-    </div>
-    <div className='contact-item'>
-      <Linkedin className='contact-icon' /> Linkedin:
-      <a href='https://linkedin.com/in/alpfreda' className='ml-1' target={'_blank'}>linkedin.com/in/alpfreda</a>
-    </div>
-    <div className='contact-item'>
-      <Twitter className='contact-icon' /> Twitter:
-      <a href='https://twitter.com/alpfreda' className='ml-1' target={'_blank'}>twitter.com/alpfreda</a>
-    </div>
+    {
+      items.map((info: any) => <div
+        key={info.name}
+        className='contact-item'>
+        <RenderIcon name={info.icon} />{info.name}:
+        <a
+          href={info.url}
+          target='_blank'
+          className='ml-1'>{info.value}</a>
+      </div>)
+    }
   </section>
+}
+
+interface RenderIconProps {
+  name: string
+}
+
+const RenderIcon = ({ name }: RenderIconProps) => {
+  switch (name) {
+    case 'email':
+      return <Email className='contact-icon' />
+    case 'github':
+      return <Github className='contact-icon' />
+    case 'linkedin':
+      return <Linkedin className='contact-icon' />
+    case 'twitter':
+      return <Twitter className='contact-icon' />
+    default:
+      return null
+  }
 }
 
 export { ContactInfo }
