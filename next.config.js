@@ -8,4 +8,14 @@ module.exports = {
     firebaseAppId: process.env.FIREBASE_APP_ID,
     firebaseMeasurementId: process.env.FIREBASE_MEASUREMENT_ID,
   },
+  webpack: (config) => {
+    config.module.rules.push(
+      {
+        test: /\.md$/,
+        use: 'raw-loader'
+      }
+    )
+
+    return config
+  },
 }
