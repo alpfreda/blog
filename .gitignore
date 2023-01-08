@@ -8,5 +8,5 @@ npm-debug.log*
 .vscode
 .eslintcache
 coverage
-.env
+.env.local
 .next
