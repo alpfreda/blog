@@ -1,9 +1,29 @@
 import React from 'react'
-import {
-  Babel, Bootstrap, MongoDB, Css3, Git, Html5, Jest, JQuery,
-  Js, Link, NodeJs, ReactIcon, Redux, Sass, SocketIO, Webpack, MaterialUI,
-  SemanticUI, TestingLibrary, Microsoft, Ruler, Docker, Mqtt, CiCd, TypeScript
-} from '../../components/svg/icons'
+import { TypeScript } from "../../components/svg/typescript"
+import { CiCd } from "../../components/svg/ci-cd"
+import { Mqtt } from "../../components/svg/mqtt"
+import { Docker } from "../../components/svg/cocker"
+import { Link } from "../../components/svg/link"
+import { Ruler } from "../../components/svg/ruler"
+import { Microsoft } from "../../components/svg/microsoft"
+import { TestingLibrary } from "../../components/svg/testing-library"
+import { SemanticUI } from "../../components/svg/semantic-ui"
+import { MaterialUI } from "../../components/svg/material-ui"
+import { Webpack } from "../../components/svg/webpack"
+import { SocketIO } from "../../components/svg/socket-io"
+import { MongoDB } from "../../components/svg/mongodb"
+import { Babel } from "../../components/svg/babel"
+import { Jest } from "../../components/svg/jest"
+import { Git } from "../../components/svg/git"
+import { NodeJs } from "../../components/svg/nodejs"
+import { Bootstrap } from "../../components/svg/bootstrap"
+import { Sass } from "../../components/svg/sass"
+import { Css3 } from "../../components/svg/css3"
+import { JQuery } from "../../components/svg/jquery"
+import { Html5 } from "../../components/svg/html5"
+import { Redux } from "../../components/svg/redux"
+import { ReactIcon } from "../../components/svg/react-icon"
+import { Js } from "../../components/svg/js"
 import { Skill } from '../../ts/interfaces/skill.interface'
 
 interface SkillsProps {
