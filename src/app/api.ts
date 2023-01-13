@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react'
 
-// Create our baseQuery instance
 const baseQuery = fetchBaseQuery({
   baseUrl: '/',
 })

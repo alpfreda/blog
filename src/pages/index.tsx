@@ -1,34 +1,23 @@
 import React from 'react'
-import { TypeAnimation } from 'react-type-animation'
-import { Skills } from './home/skills'
 import { fetchLists } from '../utils/firebase-provider'
 import { Skill } from '../ts/interfaces/skill.interface'
-import { HomeInfoItem } from '../ts/interfaces/info.interface'
+import { InfoItem } from '../ts/interfaces/info.interface'
 import { Db } from '../ts/enums/db.enums'
+import Skills from './home/skills'
+import Summary from './home/summary'
 
-interface HomeProps {
-  items: HomeInfoItem[],
-  skills: Skill[],
+interface Props {
+  items: InfoItem[]
+  skills: Skill[]
 }
 
-const Home = ({ items, skills }: HomeProps) => {
-  return <section className='introduce-summary'>
-    {
-      items.map((item: HomeInfoItem) => <TypeAnimation
-        key={item.text}
-        sequence={[
-          item.duration,
-          item.text,
-          item.duration,
-        ]}
-        wrapper={item.tag}
-        speed={item.speed}
-        cursor={item.cursor}
-        repeat={Infinity}
-      />)
-    }
-    <Skills skills={skills} />
-  </section>
+const Home = ({ items, skills }: Props) => {
+  return (
+    <section className='introduce-summary'>
+      <Summary items={items} />
+      <Skills skills={skills} />
+    </section>
+  )
 }
 
 Home.getInitialProps = async () => {
@@ -37,4 +26,4 @@ Home.getInitialProps = async () => {
   return { items, skills }
 }
 
-export default Home 
+export default Home

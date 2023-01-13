@@ -1,48 +1,23 @@
-import React, { useEffect, useState } from 'react'
-import { Email, Github, Linkedin, Twitter } from '../../components/svg/icons'
+import Icon from '../../components/svg'
+import { ContactInfo } from '../../ts/interfaces/contact-info-interface'
 
-interface ContactInfoProps {
-  items: {
-    name: string,
-    icon: string,
-    url: string,
-    value: string
-  }[]
+interface Props {
+  items: ContactInfo[]
 }
 
-const ContactInfo = ({ items }: ContactInfoProps) => {
-  return <section>
-    {
-      items.map((info: any) => <div
-        key={info.name}
-        className='contact-item'>
-        <RenderIcon name={info.icon} />{info.name}:
-        <a
-          href={info.url}
-          target='_blank'
-          className='ml-1'>{info.value}</a>
-      </div>)
-    }
-  </section>
+const ContactInfo = ({ items }: Props) => {
+  return (
+    <section>
+      {items.map((info: ContactInfo) => (
+        <div key={info.name} className='contact-item'>
+          <Icon name={info.icon} className='contact-icon' /> {info.name}:
+          <a href={info.url} target='_blank' className='contact-item-link'>
+            {info.value}
+          </a>
+        </div>
+      ))}
+    </section>
+  )
 }
 
-interface RenderIconProps {
-  name: string
-}
-
-const RenderIcon = ({ name }: RenderIconProps) => {
-  switch (name) {
-    case 'email':
-      return <Email className='contact-icon' />
-    case 'github':
-      return <Github className='contact-icon' />
-    case 'linkedin':
-      return <Linkedin className='contact-icon' />
-    case 'twitter':
-      return <Twitter className='contact-icon' />
-    default:
-      return null
-  }
-}
-
-export { ContactInfo }
+export default ContactInfo

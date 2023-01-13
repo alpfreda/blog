@@ -1,4 +1,4 @@
-export interface HomeInfoItem {
+export interface InfoItem {
   cursor: boolean,
   duration: number,
   tag: 'p' | 'div' | 'span' | 'strong' | 'a' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'aside' | 'b',
