@@ -1,5 +1,5 @@
 export interface Skill {
-  name: string,
-  icon: string,
-  order: number,
+  name: string
+  icon: any
+  order: number
 }
