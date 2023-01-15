@@ -1,0 +1,21 @@
+.loading-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.loading-circle-one {
+  opacity: 0;
+  animation: animate-fade 1s linear infinite 100ms;
+}
+
+.loading-circle-two {
+  opacity: 0;
+  animation: animate-fade 1s linear infinite 300ms;
+}
+
+.loading-circle-three {
+  opacity: 0;
+  animation: animate-fade 1s linear infinite 500ms;
+}

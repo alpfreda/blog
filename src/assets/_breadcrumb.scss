@@ -1,0 +1,18 @@
+.breadcrumb {
+  @include flex-align-center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  ul {
+    display: inline-flex;
+    color: #888;
+    li {
+      position: relative;
+      &:before {
+        content: "/";
+      }
+      &:first-child::before {
+        display: none;
+      }
+    }
+  }
+}

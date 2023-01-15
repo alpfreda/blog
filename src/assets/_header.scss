@@ -1,15 +1,25 @@
 .logo {
-  margin-left: 1rem;
+  @include flex-align-center;
   font-weight: bold;
+  gap: 0 1rem;
 }
 
 .navbar-header {
-@include flex-align-center;
+  @include flex-column;
   font-weight: bold;
+  @media (min-width: 768px) {
+    @include flex-row;
+    @include flex-align-center;
+  }
 }
 
 .navbar-header-nav {
-  margin-left: auto;
+  @include flex-align-center;
+  margin-top: 0.5rem;
+  @media (min-width: 768px) {
+    margin-left: auto;
+    margin-top: 0;
+  }
   ul {
     @include flex-row;
     gap: 1rem;

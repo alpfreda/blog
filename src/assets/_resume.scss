@@ -1,0 +1,21 @@
+.resume-content {
+  h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  em {
+    font-size: 1rem;
+    color: #999;
+  }
+  ul {
+    margin: 0.5rem 1rem 1rem;
+    padding-left: 2rem;
+    list-style: circle;
+    color: #aaa;
+    li {
+      &::marker {
+        color: $primary;
+      }
+    }
+  }
+}

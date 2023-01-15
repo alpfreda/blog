@@ -7,6 +7,10 @@
 @import "./_intro.scss";
 @import "./_form.scss";
 @import "./_contact.scss";
+@import "./_resume.scss";
+@import "./_blog.scss";
+@import "./_loading.scss";
+@import "./_animation.scss";
 
 a {
   color: $link-color;
@@ -30,12 +34,15 @@ body {
   margin-left: 0.5rem;
 }
 .app-content {
-  max-width: 50rem;
+  max-width: 54rem;
   margin-top: 3rem;
-  margin: 3rem auto;
+  margin: 1rem auto;
   max-width: auto;
   padding: 1rem 2rem 2rem;
   border-radius: 0.5rem;
+  @media (min-width: 768px) {
+    margin: 3rem auto;
+  }
 }
 
 .title {

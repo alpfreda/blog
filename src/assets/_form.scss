@@ -1,0 +1,77 @@
+.form-group {
+  position: relative;
+  margin-top: 1rem;
+
+  .form-style {
+    font-size: $form-input-font-size;
+    padding: $form-input-padding;
+    border-radius: $form-input-radius;
+    box-shadow: $form-input-box-shadow;
+    border: $form-input-border-size solid $form-input-border-color;
+    color: $form-input-color;
+    background: $form-input-bg;
+    padding-left: 3rem;
+    width: 100%;
+    outline: none;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+    }
+  }
+
+  .input-icon {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    height: 1.3rem;
+    width: 1.5rem;
+    fill: #fff;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+
+  &.has-error {
+    .form-style {
+      border-color: $form-input-error-border-color;
+    }
+    .input-icon {
+      fill: $form-input-error-icon-color;
+    }
+  }
+}
+
+.btn {
+  border-radius: 0.3rem;
+  font-size: $font-size-base;
+  @include flex-align-center;
+  border: 2px solid $btn-border-color;
+  color: $btn-border-color;
+  cursor: pointer;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background: transparent;
+
+  &:active,
+  &:focus {
+    background-color: darken($btn-bg, 20%);
+    border-color: darken($btn-border-color, 20%);
+    color: $btn-hover-color;
+  }
+  &:hover {
+    background-color: darken($btn-bg, 10%);
+    border-color: darken($btn-border-color, 10%);
+    color: $btn-hover-color;
+    svg {
+      fill: $btn-hover-color;
+    }
+  }
+}
+
+.error-message {
+  color: #f44336;
+}

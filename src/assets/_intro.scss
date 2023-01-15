@@ -1,0 +1,40 @@
+.introduce-summary {
+  color: #bababa;
+  margin-top: 1rem;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    color: #0ec00e;
+  }
+  @media (min-width: 768px) {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+
+    h3 {
+      font-size: 1.7rem;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.skills {
+  @include flex-align-center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: $skill-margin-top;
+  .skill-item {
+    @include flex-center;
+    color: $skill-color;
+    opacity: 0;
+    animation: fadeIn 0.2s;
+    animation-fill-mode: forwards;
+  }
+  svg {
+    width: $skill-img-size;
+    height: $skill-img-size;
+    margin-right: 0.5rem;
+  }
+}

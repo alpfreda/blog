@@ -1,0 +1,31 @@
+.contact-icon {
+  height: $contact-info-icon-size;
+  width: $contact-info-icon-size;
+  margin-right: 0.5rem;
+  fill: $contact-info-icon-color;
+}
+
+.contact-item {
+  color: $contact-info-item-color;
+  margin-bottom: 1rem;
+  @include flex-align-center;
+  .contact-item-link {
+    margin-left: 1rem;
+    color: $contact-info-item-link-color;
+  }
+}
+
+.contact-form {
+  margin-top: 2rem;
+
+  .contact-btn-wrapper {
+    @include flex-justify-end;
+    margin-top: 0.5rem;
+  }
+
+  .contact-btn-icon {
+    height: $contact-form-btn-icon-size;
+    fill: $contact-form-btn-color;
+    margin-right: 0.5rem;
+  }
+}
