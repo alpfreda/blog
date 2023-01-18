@@ -2,9 +2,18 @@ import { useContactForm } from './contact-hook'
 import Input from '../../components/input'
 import TextArea from '../../components/textarea'
 import Button from '../../components/button'
+import Loading from '../../components/loading'
 
 const ContactForm = () => {
-  const { error, nameRef, mailRef, messageRef, handleSubmit } = useContactForm()
+  const {
+    error,
+    nameRef,
+    mailRef,
+    messageRef,
+    success,
+    loading,
+    handleSubmit,
+  } = useContactForm()
 
   return (
     <div className='contact-form'>
@@ -33,8 +42,17 @@ const ContactForm = () => {
           iconClassName='input-icon'
         />
         {error && <div className='error-message'>{error}</div>}
+        {success && (
+          <div className='success-message'>
+           Thanks 👋 It will be a pleasure to contact you. 
+          </div>
+        )}
         <div className='contact-btn-wrapper'>
-          <Button icon='check' iconClassName='contact-btn-icon'>
+          <Button
+            icon='check'
+            loading={loading}
+            disabled={loading}
+            iconClassName='contact-btn-icon'>
             Send Message
           </Button>
         </div>

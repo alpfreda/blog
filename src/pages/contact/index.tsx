@@ -1,18 +1,14 @@
 import React from 'react'
 import ContactForm from './contact-form'
 import ContactInfo from './contact-info'
+import { ContactInfoInterface } from '../../ts/interfaces/contact-info-interface'
 import { fetchLists } from '../../utils/firebase-provider'
 
-interface ContactProps {
-  items: {
-    name: string
-    icon: string
-    url: string
-    value: string
-  }[]
+interface Props {
+  items: ContactInfoInterface[]
 }
 
-const Contact = ({ items }: ContactProps) => {
+const Contact = ({ items }: Props) => {
   return (
     <section className='contact'>
       <h2 className='title'>Contact</h2>

@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react'
-import { postData } from '../../utils/firebase-provider'
+import { usePost } from '../../utils/firebase-provider'
 
 const useContactForm = () => {
   const [error, setError] = useState('')
+  const { fetch, loading, success } = usePost('contact')
   const nameRef = useRef<HTMLInputElement>(null)
   const mailRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null)
@@ -19,7 +20,7 @@ const useContactForm = () => {
     }
 
     try {
-      await postData('contact', {
+      await fetch({
         name: nameRef.current.value,
         mail: mailRef.current.value,
         message: messageRef.current.value,
@@ -37,7 +38,16 @@ const useContactForm = () => {
     messageRef.current.value = ''
   }
 
-  return { error, nameRef, mailRef, messageRef, handleSubmit, resetForm }
+  return {
+    error,
+    loading,
+    success,
+    nameRef,
+    mailRef,
+    messageRef,
+    handleSubmit,
+    resetForm,
+  }
 }
 
 export { useContactForm }

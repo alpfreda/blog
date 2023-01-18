@@ -1,14 +1,14 @@
 import Icon from '../../components/svg'
-import { ContactInfo } from '../../ts/interfaces/contact-info-interface'
+import { ContactInfoInterface } from '../../ts/interfaces/contact-info-interface'
 
 interface Props {
-  items: ContactInfo[]
+  items: ContactInfoInterface[]
 }
 
 const ContactInfo = ({ items }: Props) => {
   return (
     <section>
-      {items.map((info: ContactInfo) => (
+      {items.map((info: ContactInfoInterface) => (
         <div key={info.name} className='contact-item'>
           <Icon name={info.icon} className='contact-icon' /> {info.name}:
           <a href={info.url} target='_blank' className='contact-item-link'>
