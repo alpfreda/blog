@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Loading = () => {
-  return <div className='loading-box'>
+  return <div className='loading-box' role='loading'>
     <svg xmlns='http://www.w3.org/2000/svg'
       width='54' height='14' viewBox='0 0 54 14'>
       <g fill='none' fillRule='evenodd' transform='translate(1 1)'>

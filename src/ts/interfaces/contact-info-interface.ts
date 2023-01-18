@@ -1,4 +1,4 @@
-export interface ContactInfo {
+export interface ContactInfoInterface {
   name: string
   icon: any
   url: string
