@@ -1,5 +1,13 @@
-import { initializeApp } from "firebase/app"
-import { addDoc, collection, doc, getDoc, getDocs, getFirestore, setDoc, setLogLevel } from 'firebase/firestore'
+import { initializeApp } from 'firebase/app'
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+} from 'firebase/firestore'
+import { useEffect, useState } from 'react'
 
 const firebaseConfig = {
   apiKey: process.env.firebaseApiKey,
@@ -12,8 +20,9 @@ const firebaseConfig = {
 }
 
 const app = initializeApp(firebaseConfig)
+
 const db = getFirestore(app)
-// setLogLevel('debug')
+
 const fetchById = (collectionName: string, id: string) => {
   const docRef = doc(db, collectionName, id)
 
@@ -33,7 +42,10 @@ const fetchLists = (collectionName: string) => {
   return new Promise(async (resolve, reject) => {
     try {
       const data = await getDocs(collectionRef)
-      const decoratedData = data.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+      const decoratedData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }))
       resolve(decoratedData)
     } catch (error) {
       reject(error)
@@ -41,18 +53,39 @@ const fetchLists = (collectionName: string) => {
   })
 }
 
-
-const postData = (collectionName: string, postData: any) => {
+const postData = (collectionName: string, data: any) => {
   const docRef = collection(db, collectionName)
 
   return new Promise(async (resolve, reject) => {
     try {
-      const data = await addDoc(docRef, postData)
-      resolve(data)
+      const result = await addDoc(docRef, data)
+      resolve(result)
     } catch (error) {
       reject(error)
     }
   })
 }
 
-export { db, fetchLists, fetchById, postData }
+const usePost = (collectionName: string) => {
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(null)
+  const [error, setError] = useState(null)
+
+  const fetch = async (data: any) => {
+    try {
+      setLoading(true)
+      setSuccess(null)
+      setError(null)
+      const json = await postData(collectionName, data)
+      setLoading(false)
+      setSuccess(json)
+    } catch (err) {
+      setLoading(false)
+      setError(err)
+    }
+  }
+
+  return { fetch, loading, success, error }
+}
+
+export { db, fetchLists, fetchById, usePost }

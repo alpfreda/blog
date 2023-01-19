@@ -44,7 +44,7 @@
 }
 
 .btn {
-  border-radius: 0.3rem;
+  border-radius: 2rem;
   font-size: $font-size-base;
   @include flex-align-center;
   border: 2px solid $btn-border-color;
@@ -55,7 +55,6 @@
   padding: 0.5rem 1rem;
   text-align: center;
   background: transparent;
-
   &:active,
   &:focus {
     background-color: darken($btn-bg, 20%);
@@ -70,8 +69,17 @@
       fill: $btn-hover-color;
     }
   }
+  &:disabled {
+    border-color: $btn-border-disabled-color;
+    color: $btn-disabled-color;
+  }
 }
 
 .error-message {
   color: #f44336;
+}
+
+.success-message{
+  margin-top: 1rem;
+  color: #ffc107;
 }

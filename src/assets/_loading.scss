@@ -1,8 +1,12 @@
-.loading-box {
+.fixed-loading {
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.btn-loading {
+  margin-right: 0.5rem;
 }
 
 .loading-circle-one {

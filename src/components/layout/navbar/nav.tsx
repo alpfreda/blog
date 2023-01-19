@@ -13,19 +13,21 @@ const Nav = () => {
   const router = useRouter()
   const path = router.asPath.split('?')[0]
 
-  return <nav className='navbar-header-nav'>
-    <ul>
-      {
-        MENUS.map(menu => <li key={menu.name}>
-          <Link
-            className={`navbar-item ${path === menu.path ? 'active' : ''}`}
-            href={menu.path}>
-            {menu.name}
-          </Link>
-        </li>)
-      }
-    </ul>
-  </nav>
+  return (
+    <nav className='navbar-header-nav'>
+      <ul>
+        {MENUS.map((menu) => (
+          <li key={menu.name}>
+            <Link
+              className={`navbar-item ${path === menu.path ? 'active' : ''}`}
+              href={menu.path}>
+              {menu.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
 }
 
 export { Nav }

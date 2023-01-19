@@ -1,23 +1,3 @@
-// module.exports = {
-//   testEnvironment: 'jsdom',
-//   collectCoverage: false,
-//   collectCoverageFrom: [
-//     '**/**/*.{js,jsx,tsx,ts}',
-//     '!**/.next/**',
-//     '!**/node_modules/**',
-//     '!**/coverage/**',
-//     '!**/config/**',
-//     '!**/folder-with-untested-files/**'
-//   ],
-//   setupFilesAfterEnv: [
-//     '<rootDir>/jest-setup.js'
-//   ],
-//   moduleNameMapper: {
-//     '\\.(css|sass)$': 'identity-obj-proxy'
-//   },
-//   coverageReporters: ['html', 'json'],
-// }
-
 const nextJest = require('next/jest')
 
 const createJestConfig = nextJest({

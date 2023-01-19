@@ -9,7 +9,7 @@ export interface IconProps {
 
 const Icon = ({ name, className }: IconProps) => {
   const SpecificStory = require(`./${name}`).default
-  return <SpecificStory className={className} />
+  return <SpecificStory role='icon' className={className} />
 }
 
 export default Icon
