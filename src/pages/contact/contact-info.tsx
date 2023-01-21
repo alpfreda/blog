@@ -8,10 +8,19 @@ interface Props {
 const ContactInfo = ({ items }: Props) => {
   return (
     <section>
-      {items.map((info: ContactInfoInterface) => (
-        <div key={info.name} className='contact-item'>
-          <Icon name={info.icon} className='contact-icon' /> {info.name}:
-          <a href={info.url} target='_blank' className='contact-item-link'>
+      {(items || []).map((info: ContactInfoInterface) => (
+        <div
+          key={info.name}
+          className='contact-item'>
+          <Icon
+            name={info.icon}
+            className='contact-icon'
+          />{' '}
+          {info.name}:
+          <a
+            href={info.url}
+            target='_blank'
+            className='contact-item-link'>
             {info.value}
           </a>
         </div>

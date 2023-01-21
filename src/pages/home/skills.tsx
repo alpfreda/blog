@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { Skill } from '../../ts/interfaces/skill.interface'
 import Icon from '../../components/svg'
 
@@ -8,7 +8,7 @@ interface SkillsProps {
 
 const Skills = ({ skills }: SkillsProps) => {
   const decoratedSkills = useMemo(() => {
-    return skills.sort((a, b) => a.order - b.order)
+    return (skills || []).sort((a, b) => a.order - b.order)
   }, [skills])
 
   return (

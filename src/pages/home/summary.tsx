@@ -8,7 +8,7 @@ interface SummaryProps {
 const Summary = ({ items }: SummaryProps) => {
   return (
     <>
-      {items.map((item: InfoItem) => (
+      {(items || []).map((item: InfoItem) => (
         <TypeAnimation
           key={item.text}
           sequence={[item.duration, item.text, item.duration]}

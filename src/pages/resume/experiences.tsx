@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactMarkdown from 'react-markdown'
 
 type props = {
@@ -13,4 +12,4 @@ const Experiences = ({ content }: props) => {
   )
 }
 
-export { Experiences }
+export default Experiences

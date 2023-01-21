@@ -1,8 +1,7 @@
-import { useContactForm } from './contact-hook'
+import useContactForm from '../../hooks/contact-hook'
 import Input from '../../components/input'
 import TextArea from '../../components/textarea'
 import Button from '../../components/button'
-import Loading from '../../components/loading'
 
 const ContactForm = () => {
   const {

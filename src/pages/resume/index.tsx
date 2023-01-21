@@ -1,5 +1,5 @@
 import React from 'react'
-import { Experiences } from './experiences'
+import Experiences from './experiences'
 
 type props = {
   content: string
@@ -15,7 +15,7 @@ const Resume = ({ content }: props) => {
 }
 
 Resume.getInitialProps = async () => {
-  const content = await require('./info.md')
+  const content = await require('../../info.md')
   return { content: content.default }
 }
 

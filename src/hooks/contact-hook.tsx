@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { usePost } from '../../utils/firebase-provider'
+import { usePost } from '../utils/firebase-provider'
 
 const useContactForm = () => {
   const [error, setError] = useState('')
@@ -50,4 +50,4 @@ const useContactForm = () => {
   }
 }
 
-export { useContactForm }
+export default useContactForm
