@@ -4,22 +4,37 @@ const Document = (props: any) => {
   return (
     <Html lang='en'>
       <Head>
-        <link rel='icon' href='/favicon.ico' />
+        <link
+          rel='icon'
+          href='/favicon.ico'
+        />
         <meta
           name='description'
-          content='Front end developer from Istanbul'
+          content='Front-end developer with more than 5 years of experience leveraging JavaScript to build responsive and mobile-first applications. Skilled in developing and testing multiple web-based applications of the most up-to-date tools and frameworks. Experience in handling complex code and focusing on writing clean and robust code. Produce plans and improve designs for usability and functionality.'
         />
-        <meta property='og:site_name' content='alpfreda.me' />
+        <meta
+          property='og:site_name'
+          content='alpfreda.me'
+        />
         <meta
           property='og:description'
-          content='Front end developer from Istanbul'
+          content='Front-end developer with more than 5 years of experience leveraging JavaScript to build responsive and mobile-first applications. Skilled in developing and testing multiple web-based applications of the most up-to-date tools and frameworks. Experience in handling complex code and focusing on writing clean and robust code. Produce plans and improve designs for usability and functionality.'
         />
-        <meta property='og:title' content='Mehdi Akbarzadeh' />
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta name='twitter:title' content='Mehdi Akbarzadeh' />
+        <meta
+          property='og:title'
+          content='Mehdi Akbarzadeh'
+        />
+        <meta
+          name='twitter:card'
+          content='summary_large_image'
+        />
+        <meta
+          name='twitter:title'
+          content='Mehdi Akbarzadeh'
+        />
         <meta
           name='twitter:description'
-          content='Restore your old photos and keep the memories alive.'
+          content='Front-end developer with more than 5 years of experience leveraging JavaScript to build responsive and mobile-first applications. Skilled in developing and testing multiple web-based applications of the most up-to-date tools and frameworks. Experience in handling complex code and focusing on writing clean and robust code. Produce plans and improve designs for usability and functionality.          '
         />
         <meta
           property='og:image'
