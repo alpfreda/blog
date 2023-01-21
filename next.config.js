@@ -11,6 +11,7 @@ module.exports = {
     firebaseAppId: process.env.FIREBASE_APP_ID,
     firebaseMeasurementId: process.env.FIREBASE_MEASUREMENT_ID,
   },
+  pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
   webpack: (config) => {
     config.module.rules.push(
       {
