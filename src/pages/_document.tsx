@@ -70,6 +70,10 @@ const Document = (props: any) => {
           content='max-snippet:-1, max-image-preview:large, max-video-preview:-1'
           name='robots'
         />
+        <meta
+          name='viewport'
+          content='width=device-width, initial-scale=1'
+        />
       </Head>
       <body>
         <Main />
