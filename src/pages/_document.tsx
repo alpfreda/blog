@@ -4,6 +4,7 @@ const Document = (props: any) => {
   return (
     <Html lang='en'>
       <Head>
+        <title>Mehdi Akbarzadeh - Frontend Developer</title>
         <link
           rel='icon'
           href='/favicon.ico'
@@ -22,7 +23,7 @@ const Document = (props: any) => {
         />
         <meta
           property='og:title'
-          content='Mehdi Akbarzadeh'
+          content='Mehdi Akbarzadeh - Frontend Developer'
         />
         <meta
           name='twitter:card'
