@@ -6,6 +6,7 @@ describe('<Button/>', () => {
     const text = 'Test Button'
     render(<Button text={text} />)
     const buttonElement = screen.getByText(text)
+
     expect(buttonElement).toBeInTheDocument()
   })
 

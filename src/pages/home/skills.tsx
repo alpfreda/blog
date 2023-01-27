@@ -8,13 +8,16 @@ interface SkillsProps {
 
 const Skills = ({ skills }: SkillsProps) => {
   const decoratedSkills = useMemo(() => {
-    return (skills || []).sort((a, b) => a.order - b.order)
+    return skills.sort((a, b) => a.order - b.order)
   }, [skills])
 
   return (
-    <section className='skills'>
+    <section
+      role='list'
+      className='skills'>
       {decoratedSkills.map((skill: Skill, index) => (
         <div
+          role='listitem'
           key={skill.name}
           className='skill-item'
           style={{ animationDelay: `${10 + index / 2}s` }}>
