@@ -1,4 +1,5 @@
 import Icon from '../../components/svg'
+import { IconTypes } from '../../ts/types/icon.types'
 
 const Portfolio = () => {
   const portfolios = [
@@ -120,7 +121,7 @@ const Portfolio = () => {
                 <div className='portfolio-item-skills-item'>
                   <Icon
                     className='portfolio-item-skills-icon'
-                    name={skill.icon}
+                    name={skill.icon as IconTypes}
                   />
                   {skill.name}
                 </div>
