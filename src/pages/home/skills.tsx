@@ -6,7 +6,7 @@ interface SkillsProps {
   skills: Skill[]
 }
 
-const Skills = ({ skills }: SkillsProps) => {
+const Skills = ({ skills = [] }: SkillsProps) => {
   const decoratedSkills = useMemo(() => {
     return skills.sort((a, b) => a.order - b.order)
   }, [skills])
