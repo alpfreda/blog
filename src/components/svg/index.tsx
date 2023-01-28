@@ -1,6 +1,6 @@
 export interface IconProps {
   name?: 'email' | 'user' | 'message' | 'github' | 'linkedin' | 'twitter' | 'check' | 'js'
-  | 'react' | 'redux' | 'jquery' | 'html5' | 'sass' | 'css3' | 'link' |
+  | 'react-icon' | 'redux' | 'jquery' | 'html5' | 'sass' | 'css3' | 'link' |
   'docker' | 'mqtt' | 'bootstrap' | 'node-js' | 'git' | 'jest' | 'babel' |
   'mongodb' | 'socket' | 'webpack' | 'material-ui' | 'semantic-ui' | 'testing-library'
   | 'microsoft' | 'ruler' | 'ci-cd' | 'typescript' | 'dots'
