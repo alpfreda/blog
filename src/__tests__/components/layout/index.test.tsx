@@ -1,5 +1,5 @@
 import { screen, render } from '@testing-library/react'
-import { Layout } from '../../layout'
+import { Layout } from '../../../components/layout'
 jest.mock('next/router', () => require('next-router-mock'));
 
 describe('<Layout/>', () => {

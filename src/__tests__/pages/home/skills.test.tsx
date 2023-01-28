@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { Skill } from '../../../ts/interfaces/skill.interface'
-import Skills from '../skills'
+import Skills from '../../../pages/home/skills'
 
 describe('<Skills/>', () => {
   it('render', () => {
