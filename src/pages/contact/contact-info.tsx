@@ -1,5 +1,5 @@
 import Icon from '../../components/svg'
-import { ContactInfoInterface } from '../../ts/interfaces/contact-info-interface'
+import { ContactInfoInterface } from '../../ts/interfaces/contact-info.interface'
 
 interface Props {
   items: ContactInfoInterface[]

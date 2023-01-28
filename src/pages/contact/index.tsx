@@ -1,7 +1,7 @@
 import React from 'react'
 import ContactForm from './contact-form'
 import ContactInfo from './contact-info'
-import { ContactInfoInterface } from '../../ts/interfaces/contact-info-interface'
+import { ContactInfoInterface } from '../../ts/interfaces/contact-info.interface'
 import { fetchLists } from '../../utils/firebase-provider'
 
 interface Props {
