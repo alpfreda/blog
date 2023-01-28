@@ -1,4 +1,4 @@
-import { IconTypes } from '../../ts/types/icon-types'
+import { IconTypes } from '../../ts/types/icon.types'
 
 export interface IconProps {
   name?: IconTypes

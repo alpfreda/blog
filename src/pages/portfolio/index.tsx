@@ -1,5 +1,5 @@
 import Icon from '../../components/svg'
-import { IconTypes } from '../../ts/types/icon-types'
+import { IconTypes } from '../../ts/types/icon.types'
 
 const Portfolio = () => {
   const portfolios = [
