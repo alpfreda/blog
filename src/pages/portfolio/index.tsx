@@ -21,7 +21,7 @@ const Portfolio = () => {
         },
       ],
       source: 'https://github.com/alpfreda/weather-app',
-      demo: 'https://www.weather.alpfreda.me',
+      demo: 'https://weather.alpfreda.me/',
     },
     {
       name: 'Countries',
@@ -41,7 +41,7 @@ const Portfolio = () => {
         },
       ],
       source: 'https://github.com/alpfreda/countries',
-      demo: 'https://www.countries.alpfreda.me',
+      demo: 'https://countries.alpfreda.me',
     },
     {
       name: 'Blog',
@@ -65,7 +65,7 @@ const Portfolio = () => {
         },
       ],
       source: 'https://github.com/alpfreda/countries',
-      demo: 'https://www.alpfreda.me',
+      demo: 'https://alpfreda.me',
     },
     {
       name: 'Svg Widget',
