@@ -1,5 +1,5 @@
 import Icon from '../../components/svg'
-import { IconTypes } from '../../ts/types/icon.types'
+import Item from './item'
 
 const Portfolio = () => {
   const portfolios = [
@@ -113,25 +113,8 @@ const Portfolio = () => {
     <section className='portfolio-content'>
       <h2 className='title'>Portfolio</h2>
       <div className='portfolio-grid'>
-        {portfolios.map(portfolio => (
-          <div className='portfolio-item'>
-            <h3>{portfolio.name}</h3>
-            <div className='portfolio-item-skills'>
-              {portfolio.skills.map(skill => (
-                <div className='portfolio-item-skills-item'>
-                  <Icon
-                    className='portfolio-item-skills-icon'
-                    name={skill.icon as IconTypes}
-                  />
-                  {skill.name}
-                </div>
-              ))}
-            </div>
-            <div className='portfolio-item-skills-action'>
-              <a href={portfolio.demo}>Demo</a>
-              <a href={portfolio.source}>Source</a>
-            </div>
-          </div>
+        {portfolios.map((portfolio: any) => (
+          <Item portfolio={portfolio} />
         ))}
       </div>
     </section>
