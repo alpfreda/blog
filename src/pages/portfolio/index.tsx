@@ -114,7 +114,7 @@ const Portfolio = () => {
       <h2 className='title'>Portfolio</h2>
       <div className='portfolio-grid'>
         {portfolios.map((portfolio: any) => (
-          <Item portfolio={portfolio} />
+          <Item key={portfolio.name} portfolio={portfolio} />
         ))}
       </div>
     </section>

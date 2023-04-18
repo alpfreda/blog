@@ -19,7 +19,9 @@ const Item = ({ portfolio }: ItemProps) => {
       <h3>{portfolio.name}</h3>
       <div className='portfolio-item-skills'>
         {portfolio.skills.map((skill: any) => (
-          <div className='portfolio-item-skills-item'>
+          <div
+            key={skill.name}
+            className='portfolio-item-skills-item'>
             <Icon
               className='portfolio-item-skills-icon'
               name={skill.icon as IconTypes}
