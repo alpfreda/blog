@@ -15,7 +15,7 @@ interface ItemProps {
 
 const Item = ({ portfolio }: ItemProps) => {
   return (
-    <div className='portfolio-item'>
+    portfolio && <div className='portfolio-item'>
       <h3>{portfolio.name}</h3>
       <div className='portfolio-item-skills'>
         {portfolio.skills.map((skill: any) => (

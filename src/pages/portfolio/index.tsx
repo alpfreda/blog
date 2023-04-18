@@ -1,4 +1,3 @@
-import Icon from '../../components/svg'
 import Item from './item'
 
 const Portfolio = () => {
