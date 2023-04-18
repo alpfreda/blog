@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { usePost } from '../utils/firebase-provider'
 
 const useContactForm = () => {
-  const [error, setError] = useState('')
+  const [error, setError] = useState<any>('')
   const { fetch, loading, success } = usePost('contact')
   const nameRef = useRef<HTMLInputElement>(null)
   const mailRef = useRef<HTMLInputElement>(null)
@@ -11,11 +11,7 @@ const useContactForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    if (
-      !nameRef.current.value ||
-      !mailRef.current.value ||
-      !messageRef.current.value
-    ) {
+    if (!nameRef.current?.value || !mailRef.current?.value || !messageRef.current?.value) {
       return setError('Please fill all fields')
     }
 
@@ -33,9 +29,15 @@ const useContactForm = () => {
   }
 
   const resetForm = () => {
-    nameRef.current.value = ''
-    mailRef.current.value = ''
-    messageRef.current.value = ''
+    if (nameRef.current) {
+      nameRef.current.value = ''
+    }
+    if (mailRef.current) {
+      mailRef.current.value = ''
+    }
+    if (messageRef.current) {
+      messageRef.current.value = ''
+    }
   }
 
   return {

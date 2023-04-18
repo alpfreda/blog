@@ -20,7 +20,7 @@ const ContactForm = () => {
         <Input
           ref={nameRef}
           type='text'
-          hasError={error && !nameRef.current.value}
+          hasError={error && !nameRef.current?.value}
           icon='user'
           placeholder='Full Name'
           iconClassName='input-icon'
@@ -28,14 +28,14 @@ const ContactForm = () => {
         <Input
           ref={mailRef}
           type='email'
-          hasError={error && !mailRef.current.value}
+          hasError={error && !mailRef.current?.value}
           icon='email'
           placeholder='Email address'
           iconClassName='input-icon'
         />
         <TextArea
           ref={messageRef}
-          hasError={error && !messageRef.current.value}
+          hasError={error && !messageRef.current?.value}
           icon='message'
           placeholder='Message'
           iconClassName='input-icon'

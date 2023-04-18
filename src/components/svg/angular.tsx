@@ -4,9 +4,6 @@ export default ({ ...props }: IconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlSpace='preserve'
-    style={{
-      enableBackground: 'new 0 0 250 250',
-    }}
     viewBox='0 0 250 250'
     {...props}>
     <path

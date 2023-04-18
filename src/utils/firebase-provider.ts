@@ -67,9 +67,9 @@ const postData = (collectionName: string, data: any) => {
 }
 
 const usePost = (collectionName: string) => {
-  const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(null)
-  const [error, setError] = useState(null)
+  const [loading, setLoading] = useState<boolean>(false)
+  const [success, setSuccess] = useState<any>(null)
+  const [error, setError] = useState<any>(null)
 
   const fetch = async (data: any) => {
     try {
