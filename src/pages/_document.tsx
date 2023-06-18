@@ -1,4 +1,5 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Head, Html, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 const Document = (props: any) => {
   return (
@@ -75,6 +76,21 @@ const Document = (props: any) => {
           name='viewport'
           content='width=device-width, initial-scale=1'
         />
+      <Script
+        strategy='lazyOnload'
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.googleAnalyticsCode}`}
+      />
+
+      <Script strategy='lazyOnload'>
+        {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.googleAnalyticsCode}', {
+                  page_path: window.location.pathname,
+                  });
+              `}
+      </Script>
       </Head>
       <body>
         <Main />

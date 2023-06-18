@@ -10,6 +10,7 @@ module.exports = {
     firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     firebaseAppId: process.env.FIREBASE_APP_ID,
     firebaseMeasurementId: process.env.FIREBASE_MEASUREMENT_ID,
+    googleAnalyticsCode: process.env.GOOGLE_ANALYTICS_CODE,
   },
   pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
   webpack: (config) => {
