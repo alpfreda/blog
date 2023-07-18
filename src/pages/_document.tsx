@@ -5,14 +5,14 @@ const Document = (props: any) => {
   return (
     <Html lang='en'>
       <Head>
-        <title>Mehdi Akbarzadeh - Frontend Developer</title>
+        <title>Mehdi Akbarzadeh - Frontend Engineer</title>
         <link
           rel='icon'
           href='/favicon.ico'
         />
         <meta
           name='description'
-          content='Front-end developer with more than 5 years of experience leveraging JavaScript to build responsive and mobile-first applications. Skilled in developing and testing multiple web-based applications of the most up-to-date tools and frameworks. Experience in handling complex code and focusing on writing clean and robust code. Produce plans and improve designs for usability and functionality.'
+          content='Skilled and experienced front-end engineer with over 6 years of experience in the high-tech industry. Proficient in React and Angular, with a deep understanding of the front-end development lifecycle. Led a team in developing a successful web app that boosted sales by 200%. Driven by learning and development, and eager to tackle more complex problems and continue finding ways to maximize user efficiency.'
         />
         <meta
           property='og:site_name'
@@ -20,11 +20,11 @@ const Document = (props: any) => {
         />
         <meta
           property='og:description'
-          content='Front-end developer with more than 5 years of experience leveraging JavaScript to build responsive and mobile-first applications. Skilled in developing and testing multiple web-based applications of the most up-to-date tools and frameworks. Experience in handling complex code and focusing on writing clean and robust code. Produce plans and improve designs for usability and functionality.'
+          content='Skilled and experienced front-end engineer with over 6 years of experience in the high-tech industry. Proficient in React and Angular, with a deep understanding of the front-end development lifecycle. Led a team in developing a successful web app that boosted sales by 200%. Driven by learning and development, and eager to tackle more complex problems and continue finding ways to maximize user efficiency.'
         />
         <meta
           property='og:title'
-          content='Mehdi Akbarzadeh - Frontend Developer'
+          content='Mehdi Akbarzadeh - Frontend Engineer'
         />
         <meta
           name='twitter:card'
@@ -36,7 +36,7 @@ const Document = (props: any) => {
         />
         <meta
           name='twitter:description'
-          content='Front-end developer with more than 5 years of experience leveraging JavaScript to build responsive and mobile-first applications. Skilled in developing and testing multiple web-based applications of the most up-to-date tools and frameworks. Experience in handling complex code and focusing on writing clean and robust code. Produce plans and improve designs for usability and functionality.          '
+          content='Skilled and experienced front-end engineer with over 6 years of experience in the high-tech industry. Proficient in React and Angular, with a deep understanding of the front-end development lifecycle. Led a team in developing a successful web app that boosted sales by 200%. Driven by learning and development, and eager to tackle more complex problems and continue finding ways to maximize user efficiency.'
         />
         <meta
           property='og:image'
