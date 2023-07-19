@@ -1,5 +1,3 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -7,7 +5,7 @@ const MENUS = [
   { path: '/', name: 'Home' },
   // { path: '/blog', name: 'Blog' },
   { path: '/portfolio', name: 'Portfolio' },
-  { path: '/resume', name: 'Resume' },
+  //{ path: '/resume', name: 'Resume' },
   { path: '/contact', name: 'Contact' },
 ]
 const Nav = () => {
