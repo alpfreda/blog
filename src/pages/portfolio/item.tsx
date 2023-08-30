@@ -31,8 +31,8 @@ const Item = ({ portfolio }: ItemProps) => {
         ))}
       </div>
       <div className='portfolio-item-skills-action'>
-        <a href={portfolio.demo}>Demo</a>
-        <a href={portfolio.source}>Source</a>
+        <a target='_blank' href={portfolio.demo}>Demo</a>
+        <a target='_blank' href={portfolio.source}>Source</a>
       </div>
     </div>
   )
